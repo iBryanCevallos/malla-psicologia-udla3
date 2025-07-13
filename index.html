@@ -3,31 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Malla Curricular - Psicología</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; background: #f9f9f9; }
-    h1 { text-align: center; }
-    .semestre { margin-bottom: 30px; }
-    .materia {
-      background: #e2e8f0;
-      padding: 10px;
-      margin: 5px 0;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .descripcion {
-      display: none;
-      margin-top: 5px;
-      font-size: 0.9em;
-      color: #333;
-      padding-left: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <h1>Malla Curricular - Psicología</h1>
 
   <!-- Semestres -->
+
   <div class="semestre">
     <h2>1er Semestre</h2>
     <div class="materia" onclick="toggle(this)">Psicología general<div class="descripcion">Sin prerrequisitos.</div></div>
@@ -54,23 +37,53 @@
     <div class="materia" onclick="toggle(this)">Pensamiento crítico<div class="descripcion">Sin prerrequisitos.</div></div>
   </div>
 
-  <!-- Continúa con los demás semestres... -->
+  <div class="semestre">
+    <h2>4to Semestre</h2>
+    <div class="materia" onclick="toggle(this)">Psicopatología de la niñez y adolescencia<div class="descripcion">Requiere: Cognición y aprendizaje, Psicología de la personalidad, Desarrollo a través de la vida I</div></div>
+    <div class="materia" onclick="toggle(this)">Inglés Intermedio II<div class="descripcion">Requiere: Inglés Intermedio I</div></div>
+    <div class="materia" onclick="toggle(this)">Psicología social<div class="descripcion">Requiere: Desarrollo a través de la vida I, Cognición y aprendizaje, Psicología de la personalidad, Introducción a la investigación en psicología</div></div>
+    <div class="materia" onclick="toggle(this)">Gestión en organizaciones saludables<div class="descripcion">Sin prerrequisitos.</div></div>
+    <div class="materia" onclick="toggle(this)">Pedagogía y andragogía<div class="descripcion">Sin prerrequisitos.</div></div>
+  </div>
+
+  <div class="semestre">
+    <h2>5to Semestre</h2>
+    <div class="materia" onclick="toggle(this)">Psicología comunitaria<div class="descripcion">Requiere: Psicología social</div></div>
+    <div class="materia" onclick="toggle(this)">Inglés Avanzado I<div class="descripcion">Requiere: Inglés Intermedio II</div></div>
+    <div class="materia" onclick="toggle(this)">Investigación en psicología II<div class="descripcion">Requiere: Introducción a la investigación en psicología, Investigación y textos académicos, Estadística en psicología</div></div>
+    <div class="materia" onclick="toggle(this)">Entrevistas psicológicas<div class="descripcion">Sin prerrequisitos.</div></div>
+    <div class="materia" onclick="toggle(this)">Psicología con aplicación al ámbito social<div class="descripcion">Sin prerrequisitos.</div></div>
+    <div class="materia" onclick="toggle(this)">Proyectos de vida<div class="descripcion">Sin prerrequisitos.</div></div>
+  </div>
+
+  <div class="semestre">
+    <h2>6to Semestre</h2>
+    <div class="materia" onclick="toggle(this)">Medición en psicología<div class="descripcion">Requiere: Investigación en psicología II</div></div>
+    <div class="materia" onclick="toggle(this)">Pruebas psicológicas y evaluación<div class="descripcion">Requiere: Investigación en psicología II o Psicopatología de la niñez y adolescencia</div></div>
+    <div class="materia" onclick="toggle(this)">Psicopatología del adulto y del adulto mayor<div class="descripcion">Requiere: Psicopatología de la niñez y adolescencia</div></div>
+    <div class="materia" onclick="toggle(this)">Técnicas de abordaje grupal<div class="descripcion">Requiere: Psicología con aplicación al ámbito social</div></div>
+    <div class="materia" onclick="toggle(this)">Prevención e intervención en psicología<div class="descripcion">Requiere: Psicología con aplicación al ámbito social</div></div>
+    <div class="materia" onclick="toggle(this)">Inglés Avanzado II<div class="descripcion">Requiere: Inglés Avanzado I</div></div>
+  </div>
+
+  <div class="semestre">
+    <h2>7mo Semestre</h2>
+    <div class="materia" onclick="toggle(this)">Diversidad sociocultural y la psicología<div class="descripcion">Requiere: Psicopatología del adulto y del adulto mayor</div></div>
+    <div class="materia" onclick="toggle(this)">Educación en sexualidad<div class="descripcion">Requiere: Psicopatología del adulto y del adulto mayor</div></div>
+    <div class="materia" onclick="toggle(this)">Gestión e intervención en desastres y emergencias<div class="descripcion">Sin prerrequisitos.</div></div>
+    <div class="materia" onclick="toggle(this)">Orientación familiar<div class="descripcion">Requiere: Entrevistas psicológicas, Psicopatología del adulto y del adulto mayor</div></div>
+    <div class="materia" onclick="toggle(this)">Diseño de investigación y formulación de proyectos I (Tita I)<div class="descripcion">Sin prerrequisitos.</div></div>
+  </div>
 
   <div class="semestre">
     <h2>8vo Semestre</h2>
-    <div class="materia" onclick="toggle(this)">Psicología perinatal<div class="descripcion">Requiere: Técnicas de abordaje grupal y Prevención e intervención en psicología</div></div>
+    <div class="materia" onclick="toggle(this)">Psicología perinatal<div class="descripcion">Requiere: Técnicas de abordaje grupal, Prevención e intervención en psicología</div></div>
     <div class="materia" onclick="toggle(this)">Motivación y emoción<div class="descripcion">Requiere: Pruebas psicológicas y evaluación</div></div>
-    <div class="materia" onclick="toggle(this)">Prácticas preprofesionales<div class="descripcion">Requiere: Pruebas psicológicas y evaluación, Entrevista psicológica, Orientación familiar, Gestión e intervención en desastres y emergencias</div></div>
+    <div class="materia" onclick="toggle(this)">Prácticas preprofesionales<div class="descripcion">Requiere: Pruebas psicológicas y evaluación, Entrevistas psicológicas, Orientación familiar, Gestión e intervención en desastres y emergencias</div></div>
     <div class="materia" onclick="toggle(this)">Epidemiología y problemas psicosociales contemporáneos<div class="descripcion">Requiere: Gestión e intervención en desastres y emergencias</div></div>
     <div class="materia" onclick="toggle(this)">Diseño de investigación y formulación de proyectos II (Tita II)<div class="descripcion">Requiere: Tita I</div></div>
   </div>
 
-  <script>
-    function toggle(el) {
-      const desc = el.querySelector('.descripcion');
-      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
