@@ -1,36 +1,52 @@
 body {
   font-family: sans-serif;
   padding: 20px;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   background: #f9f9f9;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .semestre {
   margin-bottom: 30px;
 }
 
+.semestre h2 {
+  background: #2b6cb0;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 .materia {
-  background: #e2e8f0;
   padding: 10px;
   margin: 5px 0;
   border-radius: 8px;
-  cursor: pointer;
   transition: background 0.2s ease;
+  border: 1px solid #ccc;
+  background: #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
-.materia:hover {
-  background: #cbd5e1;
+.materia.locked {
+  background: #e2e2e2;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.materia.completed {
+  background: #c6f6d5;
+  text-decoration: line-through;
 }
 
 .descripcion {
-  display: none;
-  margin-top: 5px;
-  font-size: 0.9em;
+  font-size: 0.85em;
   color: #333;
-  padding-left: 10px;
 }
