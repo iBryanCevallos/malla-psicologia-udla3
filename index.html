@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Interactiva - Psicología UDLA</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <title>Malla Curricular - Psicología</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; background: #f9f9f9; }
+    h1 { text-align: center; }
+    .semestre { margin-bottom: 30px; }
+    .materia {
+      background: #e2e8f0;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .descripcion {
+      display: none;
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: #333;
+      padding-left: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Malla Curricular Interactiva – Psicología UDLA</h1>
-  <div id="grid">
-    <!-- Semestre 1 -->
-    <div class="semester">
-      <h2>1° Semestre</h2>
-      <button class="course" data-id="A" data-prereqs="">Psicología General</button>
-      <button class="course" data-id="B" data-prereqs="">Perspectivas en Psicología</button>
-      <button class="course" data-id="C" data-prereqs="">Lenguaje Cuantitativo</button>
-      <button class="course" data-id="D" data-prereqs="">Lenguaje y Comunicación Digital</button>
-    </div>
-    <!-- Semestre 2 -->
-    <div class="semester">
-      <h2>2° Semestre</h2>
-      <button class="course" data-id="E" data-prereqs="C">Estadística en Psicología</button>
-      <button class="course" data-id="F" data-prereqs="A+B">Introducción a la Investigación en Psicología</button>
-      <button class="course" data-id="G" data-prereqs="D">Investigación y Textos Académicos</button>
-    </div>
-    <!-- Semestre 3 -->
-    <div class="semester">
-      <h2>3° Semestre</h2>
-      <button class="course" data-id="H" data-prereqs="A">Psicología de la Personalidad</button>
-      <button class="course" data-id="I" data-prereqs="">Inglés Elemental 2</button>
-      <button class="course" data-id="J" data-prereqs="A">Bases Fisiológicas de la Psicología</button>
-    </div>
-    <!-- Semestre 4 -->
-    <div class="semester">
-      <h2>4° Semestre</h2>
-      <button class="course" data-id="K" data-prereqs="">Inglés Intermedio I</button>
-      <button class="course" data-id="L" data-prereqs="J">Cognición y Aprendizaje</button>
-      <button class="course" data-id="M" data-prereqs="A">Desarrollo a Través de la Vida I</button>
-      <button class="course" data-id="N" data-prereqs="">Pensamiento Crítico</button>
-    </div>
-    <!-- Semestre 5 -->
-    <div class="semester">
-      <h2>5° Semestre</h2>
-      <button class="course" data-id="O" data-prereqs="">Inglés Intermedio II</button>
-      <button class="course" data-id="P" data-prereqs="L+H+M">Psicopatología de la Niñez y Adolescencia</button>
-    </div>
-    <!-- Semestre 6 -->
-    <div class="semester">
-      <h2>6° Semestre</h2>
-      <button class="course" data-id="Q" data-prereqs="M+L+H+F">Psicología Social</button>
-      <button class="course" data-id="R" data-prereqs="">Gestión en Organizaciones Saludables</button>
-      <button class="course" data-id="S" data-prereqs="">Pedagogía y Andragogía</button>
-    </div>
-    <!-- Semestre 7 -->
-    <div class="semester">
-      <h2>7° Semestre</h2>
-      <button class="course" data-id="T" data-prereqs="Q">Psicología Comunitaria</button>
-      <button class="course" data-id="U" data-prereqs="">Inglés Avanzado I</button>
-      <button class="course" data-id="V" data-prereqs="F+G+E">Investigación en Psicología II</button>
-      <button class="course" data-id="W" data-prereqs="">Entrevistas Psicológicas</button>
-      <button class="course" data-id="X" data-prereqs="">Psicología con Aplicación al Ámbito Social</button>
-      <button class="course" data-id="Y" data-prereqs="">Proyectos de Vida</button>
-    </div>
+
+  <h1>Malla Curricular - Psicología</h1>
+
+  <!-- Semestres -->
+  <div class="semestre">
+    <h2>1er Semestre</h2>
+    <div class="materia" onclick="toggle(this)">Psicología general<div class="descripcion">Sin prerrequisitos.</div></div>
+    <div class="materia" onclick="toggle(this)">Perspectivas en psicología<div class="descripcion">Sin prerrequisitos.</div></div>
+    <div class="materia" onclick="toggle(this)">Lenguaje cuantitativo<div class="descripcion">Sin prerrequisitos.</div></div>
+    <div class="materia" onclick="toggle(this)">Lenguaje y comunicación digital<div class="descripcion">Sin prerrequisitos.</div></div>
   </div>
-  <script src="script.js"></script>
+
+  <div class="semestre">
+    <h2>2do Semestre</h2>
+    <div class="materia" onclick="toggle(this)">Estadística en psicología<div class="descripcion">Requiere: Lenguaje cuantitativo</div></div>
+    <div class="materia" onclick="toggle(this)">Introducción a la investigación en psicología<div class="descripcion">Requiere: Psicología general, Perspectivas en psicología</div></div>
+    <div class="materia" onclick="toggle(this)">Investigación y textos académicos<div class="descripcion">Requiere: Lenguaje y comunicación digital</div></div>
+    <div class="materia" onclick="toggle(this)">Psicología de la personalidad<div class="descripcion">Requiere: Psicología general</div></div>
+    <div class="materia" onclick="toggle(this)">Inglés elemental 2<div class="descripcion">Sin prerrequisitos.</div></div>
+    <div class="materia" onclick="toggle(this)">Bases fisiológicas de la psicología<div class="descripcion">Requiere: Psicología general</div></div>
+  </div>
+
+  <div class="semestre">
+    <h2>3er Semestre</h2>
+    <div class="materia" onclick="toggle(this)">Inglés Intermedio I<div class="descripcion">Requiere: Inglés elemental 2</div></div>
+    <div class="materia" onclick="toggle(this)">Cognición y aprendizaje<div class="descripcion">Requiere: Bases fisiológicas de la psicología</div></div>
+    <div class="materia" onclick="toggle(this)">Desarrollo a través de la vida I<div class="descripcion">Requiere: Psicología general</div></div>
+    <div class="materia" onclick="toggle(this)">Pensamiento crítico<div class="descripcion">Sin prerrequisitos.</div></div>
+  </div>
+
+  <!-- Continúa con los demás semestres... -->
+
+  <div class="semestre">
+    <h2>8vo Semestre</h2>
+    <div class="materia" onclick="toggle(this)">Psicología perinatal<div class="descripcion">Requiere: Técnicas de abordaje grupal y Prevención e intervención en psicología</div></div>
+    <div class="materia" onclick="toggle(this)">Motivación y emoción<div class="descripcion">Requiere: Pruebas psicológicas y evaluación</div></div>
+    <div class="materia" onclick="toggle(this)">Prácticas preprofesionales<div class="descripcion">Requiere: Pruebas psicológicas y evaluación, Entrevista psicológica, Orientación familiar, Gestión e intervención en desastres y emergencias</div></div>
+    <div class="materia" onclick="toggle(this)">Epidemiología y problemas psicosociales contemporáneos<div class="descripcion">Requiere: Gestión e intervención en desastres y emergencias</div></div>
+    <div class="materia" onclick="toggle(this)">Diseño de investigación y formulación de proyectos II (Tita II)<div class="descripcion">Requiere: Tita I</div></div>
+  </div>
+
+  <script>
+    function toggle(el) {
+      const desc = el.querySelector('.descripcion');
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
 </body>
 </html>
