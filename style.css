@@ -26,12 +26,8 @@ h1 {
   padding: 10px;
   margin: 5px 0;
   border-radius: 8px;
-  transition: background 0.2s ease;
   border: 1px solid #ccc;
   background: #e2e8f0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   cursor: pointer;
 }
 
@@ -46,7 +42,3 @@ h1 {
   text-decoration: line-through;
 }
 
-.descripcion {
-  font-size: 0.85em;
-  color: #333;
-}
