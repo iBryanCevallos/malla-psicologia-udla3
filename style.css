@@ -22,14 +22,15 @@ h1 {
 }
 
 .semestre h2 {
-  background-color: #9333ea; /* morado vibrante */
+  background-color: #9333ea;
   color: white;
   padding: 12px;
   margin: -15px -15px 15px -15px;
   border-radius: 8px 8px 0 0;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
 }
+
 
 .materia {
   padding: 10px 15px;
