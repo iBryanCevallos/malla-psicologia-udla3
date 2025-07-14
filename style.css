@@ -1,45 +1,51 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   padding: 20px;
   max-width: 1000px;
   margin: auto;
-  background: #f9f9f9;
+  background: #f5f3f7;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 40px;
+  font-size: 28px;
+  color: #4c1d95;
 }
 
 .semestre {
   margin-bottom: 30px;
-  padding: 10px;
-  border-left: 5px solid #2b6cb0;
-  background: #edf2f7;
-  border-radius: 6px;
+  border-radius: 8px;
+  background: #ede9f3;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .semestre h2 {
-  color: #2b6cb0;
-  margin-bottom: 10px;
+  background: #7c3aed; /* morado fuerte */
+  color: white;
+  padding: 12px;
+  margin: -15px -15px 15px -15px;
+  border-radius: 8px 8px 0 0;
+  font-size: 18px;
 }
 
 .materia {
-  padding: 10px;
-  margin: 5px 0;
+  padding: 10px 15px;
+  margin: 6px 0;
   border-radius: 6px;
   border: 1px solid #ccc;
-  background: #e2e8f0;
-  transition: all 0.2s ease;
+  background: #e0e7ff; /* azul lavanda claro */
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .materia:hover {
-  background: #cbd5e1;
+  background: #d1d5ff;
 }
 
 .materia.locked {
-  background: #e0e0e0;
+  background: #f0f0f0;
   color: #999;
   cursor: not-allowed;
 }
@@ -47,8 +53,10 @@ h1 {
 .materia.completed {
   background: #c6f6d5;
   text-decoration: line-through;
-  color: #333;
+  color: #1f2937;
+  font-weight: 500;
 }
+
 
 
 
