@@ -58,9 +58,13 @@ const materias = [
 ];
 
 let aprobadas = new Set();
-let visibles = new Set(materias.filter(m => m.semestre === 1).map(m => m.id));
 
-function actualizarVista() {
+function puedeActivarse(materia) {
+  if (!materia.depende) return true;
+  return materia.depende.every(id => aprobadas.has(id));
+}
+
+function renderMalla() {
   const contenedor = document.getElementById("malla");
   contenedor.innerHTML = "";
 
@@ -72,39 +76,33 @@ function actualizarVista() {
     bloque.appendChild(titulo);
 
     materias
-      .filter(m => m.semestre === semestre && visibles.has(m.id))
+      .filter(m => m.semestre === semestre)
       .forEach(m => {
         const div = document.createElement("div");
         div.className = "materia";
         div.textContent = m.nombre;
 
-        if (aprobadas.has(m.id)) {
-          div.classList.add("completed");
-        }
+        const estaAprobada = aprobadas.has(m.id);
+        const activa = puedeActivarse(m);
+
+        if (estaAprobada) div.classList.add("completed");
+        else if (!activa) div.classList.add("locked");
 
         div.addEventListener("click", () => {
-          if (aprobadas.has(m.id)) {
+          if (!activa) return;
+          if (estaAprobada) {
             aprobadas.delete(m.id);
           } else {
             aprobadas.add(m.id);
-            materias.forEach(destino => {
-              if (destino.depende && destino.depende.includes(m.id)) {
-                if (destino.depende.every(req => aprobadas.has(req))) {
-                  visibles.add(destino.id);
-                }
-              }
-            });
           }
-          actualizarVista();
+          renderMalla();
         });
 
         bloque.appendChild(div);
       });
 
-    if (bloque.children.length > 1) {
-      contenedor.appendChild(bloque);
-    }
+    contenedor.appendChild(bloque);
   }
 }
 
-document.addEventListener("DOMContentLoaded", actualizarVista);
+document.addEventListener("DOMContentLoaded", renderMalla);
