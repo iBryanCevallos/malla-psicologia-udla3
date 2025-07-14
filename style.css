@@ -29,16 +29,16 @@ h1 {
   border: 1px solid #ccc;
   background: #e2e8f0;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.materia.locked {
-  background: #e2e2e2;
-  color: #aaa;
-  cursor: not-allowed;
+.materia:hover {
+  background: #cbd5e1;
 }
 
 .materia.completed {
   background: #c6f6d5;
   text-decoration: line-through;
+  color: #333;
 }
 
