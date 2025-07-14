@@ -29,11 +29,17 @@ h1 {
   border: 1px solid #ccc;
   background: #e2e8f0;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .materia:hover {
   background: #cbd5e1;
+}
+
+.materia.locked {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
 }
 
 .materia.completed {
@@ -41,4 +47,5 @@ h1 {
   text-decoration: line-through;
   color: #333;
 }
+
 
